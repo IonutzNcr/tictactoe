@@ -61,3 +61,6 @@ body{
     border-right: 2px solid red;
 }
 
+.hidden{
+    display : none;
+}
