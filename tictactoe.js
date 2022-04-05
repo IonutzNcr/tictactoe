@@ -3,6 +3,7 @@ const frame1 = (()=>{
     const frame1_containers = [];
 
     const title_container = document.createElement("div");
+    title_container.setAttribute("class","title");
     const title = document.createElement("h1");
     title_container.appendChild(title);
     title.textContent= "TIC TAC TOE";
@@ -12,10 +13,12 @@ const frame1 = (()=>{
     const message = document.createElement("p");
     message_container.appendChild(message);
     message.textContent= "Plz slect your names";
+    message_container.setAttribute("class","first-message");
 
     const form = document.createElement("form");
     frame1_containers.push(form);
     const input_container = document.createElement("div");
+    input_container.setAttribute("class","inputs");
     const input_player_1 = document.createElement("input");
     input_player_1.setAttribute("placeholder","Player 1");
     const input_player_2 = document.createElement("input");
@@ -43,12 +46,6 @@ const frame1 = (()=>{
     
     button.addEventListener("click",toggleHidden);
     button.addEventListener("click",e=>e.preventDefault());
-    //function qui crée frame 2 par default et supprime la precedente si elle existe 
-    /* Si frame 2 c une fonction factorielle alors on pourra créer sur demande et supprimer
-    la precedence avec delete object :))  */
-    
-    //function qui reinitialise frame 2 ainsi que les inputs
-
     
     return{frame1_containers,button,input_player_1,input_player_2,toggleHidden}
 })();
