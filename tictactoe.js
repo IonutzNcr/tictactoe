@@ -15,12 +15,24 @@ const frame1 = (()=>{
     message.textContent= "Plz slect your names";
     message_container.setAttribute("class","first-message");
 
+    // Ici on va modifier 
     const form = document.createElement("form");
     frame1_containers.push(form);
     const input_container = document.createElement("div");
     input_container.setAttribute("class","inputs");
+    const div_player1_container = document.createElement("div");
+    const label_input1 = document.createElement("label");
+    label_input1.setAttribute("for","input1");
+    label_input1.textContent = "Player 1";
+    div_player1_container.appendChild(label_input1);
     const input_player_1 = document.createElement("input");
     input_player_1.setAttribute("placeholder","Player 1");
+    input_player_1.setAttribute("id","input1");
+    div_player1_container.appendChild(input_player_1);
+
+    const div_player2_container = document.createElement("div");
+    //je dois creer un select
+    
     const input_player_2 = document.createElement("input");
     input_player_2.setAttribute("placeholder","Player 2");
     const button_container = document.createElement("div");
@@ -28,7 +40,7 @@ const frame1 = (()=>{
     button.textContent = "Start";
 
     button_container.appendChild(button);
-    input_container.appendChild(input_player_1);
+    input_container.appendChild(div_player1_container);
     input_container.appendChild(input_player_2);
     form.appendChild(input_container);
     form.appendChild(button_container);
